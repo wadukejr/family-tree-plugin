@@ -1,5 +1,6 @@
 Draw.loadPlugin(function(ui) {
-  console.log('✅ Family Tree Plugin loaded');
+  console.log('✅ Family Tree Plugin loaded'); // Confirmation for DevTools
+
   const graph = ui.editor.graph;
 
   function createNode(graph, parent, name, title, x, y, width = 140, height = 60) {
@@ -75,12 +76,13 @@ Draw.loadPlugin(function(ui) {
     input.click();
   }
 
-  // Add menu items
+  // Register actions
+  ui.actions.addAction('insertSampleTree', insertSampleTree);
+  ui.actions.addAction('importTreeFromFile', importFromFile);
+
+  // Add to Extras menu
   ui.menus.get('extras').funct = function(menu, parent) {
     ui.menus.addMenuItem(menu, 'insertSampleTree', parent);
     ui.menus.addMenuItem(menu, 'importTreeFromFile', parent);
   };
-
-  ui.actions.addAction('insertSampleTree', insertSampleTree);
-  ui.actions.addAction('importTreeFromFile', importFromFile);
 });
