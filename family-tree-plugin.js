@@ -10,10 +10,10 @@ Draw.loadPlugin(function(ui) {
     const parent = graph.getDefaultParent();
     graph.getModel().beginUpdate();
     try {
-      createNode(graph, parent, 'Joseph Alonzo McLelland', 'Paternal Grandfather', 100, 30);
-      createNode(graph, parent, 'Walterene McWilliams', 'Paternal Grandmother', 300, 30);
-      createNode(graph, parent, 'Ernest Frederick McLelland', 'Father', 200, 130);
-      createNode(graph, parent, 'Carol Lynn McLelland', 'Decedent', 200, 230);
+      createNode(graph, parent, 'John Smith', 'Paternal Grandfather', 100, 30);
+      createNode(graph, parent, 'Mary Smith', 'Paternal Grandmother', 300, 30);
+      createNode(graph, parent, 'William Smith', 'Father', 200, 130);
+      createNode(graph, parent, 'Jane Smith', 'Decedent', 200, 230);
     } finally {
       graph.getModel().endUpdate();
     }
