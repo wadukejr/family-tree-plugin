@@ -1,4 +1,5 @@
 Draw.loadPlugin(function(ui) {
+  console.log('✅ Family Tree Plugin loaded');
   const graph = ui.editor.graph;
 
   function createNode(graph, parent, name, title, x, y, width = 140, height = 60) {
